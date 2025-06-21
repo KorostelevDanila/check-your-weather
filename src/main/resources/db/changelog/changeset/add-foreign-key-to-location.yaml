@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-foreign-key-to-location
+      author: Korostelev Danila
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: location
+            constraintName: user_id_fk
+            referencedTableName: user
+            referencedColumnNames: id
