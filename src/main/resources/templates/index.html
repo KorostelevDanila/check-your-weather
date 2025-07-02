@@ -19,6 +19,7 @@
             <a class="btn btn-outline-danger">Sign out</a>
             <a th:href="@{/sign-in}" class="btn btn-light">Sign-in</a>
             <a th:href="@{/sign-up}" class="btn btn-primary">Sign-up</a>
+            <a th:if="${user}" th:href="@{/sign-out}" class="btn btn-outline-danger">Sign out</a>
         </div>
     </div>
 </nav>
