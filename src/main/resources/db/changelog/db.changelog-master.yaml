@@ -5,3 +5,5 @@ databaseChangeLog:
       file: db/changelog/changeset/create-location-table.yaml
   - include:
       file: db/changelog/changeset/add-foreign-key-to-location.yaml
+  - include:
+      file: db/changelog/changeset/create-sessions-tables.yaml

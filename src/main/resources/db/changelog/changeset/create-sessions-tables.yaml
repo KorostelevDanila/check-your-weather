@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user
+      author: Korostelev Danila
+      changes:
+        - sqlFile:
+            path: org/springframework/session/jdbc/schema-postgresql.sql
+            relativeToChangelogFile: false
