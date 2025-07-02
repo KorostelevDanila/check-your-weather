@@ -15,11 +15,10 @@
             Weather Tracker
         </a>
         <div class="d-flex align-items-center">
-            <span class="navbar-text me-3">zhukovsd</span>
-            <a class="btn btn-outline-danger">Sign out</a>
-            <a th:href="@{/sign-in}" class="btn btn-light">Sign-in</a>
-            <a th:href="@{/sign-up}" class="btn btn-primary">Sign-up</a>
+            <span th:if="${user}" th:text="${user.username}" class="navbar-text me-3">username</span>
             <a th:if="${user}" th:href="@{/sign-out}" class="btn btn-outline-danger">Sign out</a>
+            <a th:unless="${user}" th:href="@{/sign-in}" class="btn btn-light">Sign-in</a>
+            <a th:unless="${user}" th:href="@{/sign-up}" class="btn btn-primary">Sign-up</a>
         </div>
     </div>
 </nav>
