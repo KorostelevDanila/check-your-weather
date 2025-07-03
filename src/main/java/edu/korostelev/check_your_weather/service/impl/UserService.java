@@ -1,11 +1,10 @@
-package edu.korostelev.check_your_weather.service;
+package edu.korostelev.check_your_weather.service.impl;
 
 import edu.korostelev.check_your_weather.dto.user.UserDTO;
 import edu.korostelev.check_your_weather.exception.UserNotFoundException;
 import edu.korostelev.check_your_weather.model.User;
 import edu.korostelev.check_your_weather.repository.UserRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.servlet.resource.ResourceUrlProvider;
 
 import java.util.Optional;
 
