@@ -17,12 +17,9 @@ public class UserService {
     }
 
     public UserDTO getUserById(Integer id) throws UserNotFoundException {
-        Optional<User> user = userRepository.getUserById(id);
-        if (user.isPresent()) {
-            UserDTO userDTO = new UserDTO(user.get().getId(), user.get().getLogin());
-            return userDTO;
-        } else {
-            throw new UserNotFoundException("No such user exists in repository");
-        }
+            Optional<User> user = userRepository.getUserById(id);
+            Integer userId = user.orElseThrow(() -> new UserNotFoundException("No such user exists in repository")).getId();
+            String userLogin = user.orElseThrow(() -> new UserNotFoundException("No such user exists in repository")).getLogin();
+            return new UserDTO(userId, userLogin);
     }
 }
