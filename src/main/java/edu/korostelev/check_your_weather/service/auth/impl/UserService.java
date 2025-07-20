@@ -1,4 +1,4 @@
-package edu.korostelev.check_your_weather.service.impl;
+package edu.korostelev.check_your_weather.service.auth.impl;
 
 import edu.korostelev.check_your_weather.dto.user.UserDTO;
 import edu.korostelev.check_your_weather.exception.UserNotFoundException;

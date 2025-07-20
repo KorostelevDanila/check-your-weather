@@ -3,7 +3,7 @@ package edu.korostelev.check_your_weather.controller;
 import edu.korostelev.check_your_weather.dto.user.UserDTO;
 import edu.korostelev.check_your_weather.exception.UserNotFoundException;
 import edu.korostelev.check_your_weather.security.SecurityProfile;
-import edu.korostelev.check_your_weather.service.impl.UserService;
+import edu.korostelev.check_your_weather.service.auth.impl.UserService;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

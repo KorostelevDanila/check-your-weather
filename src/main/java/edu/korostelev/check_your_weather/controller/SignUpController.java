@@ -1,7 +1,7 @@
 package edu.korostelev.check_your_weather.controller;
 
 import edu.korostelev.check_your_weather.dto.user.SignUpRequestCredentials;
-import edu.korostelev.check_your_weather.service.interfaces.RegistrationService;
+import edu.korostelev.check_your_weather.service.auth.RegistrationService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

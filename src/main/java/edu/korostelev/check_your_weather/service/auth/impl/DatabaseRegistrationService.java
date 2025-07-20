@@ -1,10 +1,10 @@
-package edu.korostelev.check_your_weather.service.impl;
+package edu.korostelev.check_your_weather.service.auth.impl;
 
 import edu.korostelev.check_your_weather.dto.user.SignUpRequestCredentials;
 import edu.korostelev.check_your_weather.dto.user.UserDTO;
 import edu.korostelev.check_your_weather.model.User;
 import edu.korostelev.check_your_weather.repository.UserRepository;
-import edu.korostelev.check_your_weather.service.interfaces.RegistrationService;
+import edu.korostelev.check_your_weather.service.auth.RegistrationService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
