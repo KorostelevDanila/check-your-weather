@@ -2,9 +2,15 @@ package edu.korostelev.check_your_weather.model;
 
 import jakarta.persistence.*;
 
-import edu.korostelev.check_your_weather.model.Location;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.List;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "\"user\"")
 public class User {
@@ -19,52 +25,13 @@ public class User {
             allocationSize = 1
     )
     private Integer id;
-
     @Column(
             unique = true
     )
     private String login;
-
     private String password;
-
     @OneToMany(mappedBy="user")
     private List<Location> locations;
-
-    public User() {
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public List<Location> getLocations() {
-        return locations;
-    }
-
-    public void setLocations(List<Location> locations) {
-        this.locations = locations;
-    }
 
     public User(String login, String password) {
         this.login = login;
