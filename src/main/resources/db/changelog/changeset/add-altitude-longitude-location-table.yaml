@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-altitude-longitude-location-table
+      author: Korostelev Danila
+      changes:
+        - addColumn:
+            tableName: location
+            columns:
+              - column:
+                  name: longitude
+                  type: decimal
+              - column:
+                  name: latitude
+                  type: decimal

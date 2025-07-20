@@ -1,10 +1,9 @@
 package edu.korostelev.check_your_weather.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
+
+import java.math.BigDecimal;
 
 @Entity
 public class Location {
@@ -13,9 +12,19 @@ public class Location {
     private Integer id;
     private String name;
     @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
-    private Double latitude;
-    private Double longtitude;
+    private BigDecimal latitude;
+    private BigDecimal longitude;
+
+    public Location() {
+
+    }
+
+    public Location(String name, User user) {
+        this.name = name;
+        this.user = user;
+    }
 
     public Integer getId() {
         return id;
@@ -41,19 +50,19 @@ public class Location {
         this.user = user;
     }
 
-    public Double getLatitude() {
+    public BigDecimal getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Double latitude) {
+    public void setLatitude(BigDecimal latitude) {
         this.latitude = latitude;
     }
 
-    public Double getLongtitude() {
-        return longtitude;
+    public BigDecimal getLongitude() {
+        return longitude;
     }
 
-    public void setLongtitude(Double longtitude) {
-        this.longtitude = longtitude;
+    public void setLongitude(BigDecimal longitude) {
+        this.longitude = longitude;
     }
 }

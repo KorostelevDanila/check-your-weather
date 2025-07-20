@@ -58,8 +58,17 @@ public class User {
         this.password = password;
     }
 
+    public List<Location> getLocations() {
+        return locations;
+    }
+
+    public void setLocations(List<Location> locations) {
+        this.locations = locations;
+    }
+
     public User(String login, String password) {
         this.login = login;
         this.password = password;
     }
+
 }

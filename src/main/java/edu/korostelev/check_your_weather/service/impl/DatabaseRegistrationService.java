@@ -22,6 +22,6 @@ public class DatabaseRegistrationService implements RegistrationService {
     public UserDTO register(SignUpRequestCredentials credentials) {
         User recievedUser = new User(credentials.getLogin(), passwordEncoder.encode(credentials.getPassword()));
         User createdUser = userRepository.save(recievedUser);
-        return new UserDTO(createdUser.getId(), createdUser.getLogin());
+        return new UserDTO(createdUser.getId(), createdUser.getLogin(), createdUser.getLocations());
     }
 }
